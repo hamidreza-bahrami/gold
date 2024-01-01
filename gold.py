@@ -31,6 +31,7 @@ def show_page():
     EUR_USD = st.slider('نسبت یورو به دلار', 1.039, 1.59, 1.050)
 
     button = st.button('محاسبه و پیش بینی')
+    button2 = st.link_button("Robo-Ai بازگشت به", "https://robo-ai.ir")
     if button:
         x = np.array([[SPX, USO, SLV, EUR_USD]])
 
