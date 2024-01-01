@@ -20,7 +20,7 @@ def show_page():
     st.write("<h2 style='text-align: center; color: gray;'>ETF پیش بینی بر اساس شاخص های صندوق</h2>", unsafe_allow_html=True)
     st.write("<h3 style='text-align: center; color: gray;'>شاخص های زیر را وارد کنید</h3>", unsafe_allow_html=True)
     st.write("<h4 style='text-align: center; color: gray;'>Robo-Ai.ir طراحی شده توسط</h4>", unsafe_allow_html=True)
-    st.link_button("Robo-Ai بازگشت به", "https://robo-ai.ir")
+    button2 = st.link_button("Robo-Ai بازگشت به", "https://robo-ai.ir")
     
     SPX = st.slider('شاخص سهام 500 شرکت بزرگ ایالات متحده (S & P 500)', 676.0, 2872.0, 700.0)
 
@@ -31,7 +31,6 @@ def show_page():
     EUR_USD = st.slider('نسبت یورو به دلار', 1.039, 1.59, 1.050)
 
     button = st.button('محاسبه و پیش بینی')
-    button2 = st.link_button("Robo-Ai بازگشت به", "https://robo-ai.ir")
     if button:
         x = np.array([[SPX, USO, SLV, EUR_USD]])
 
