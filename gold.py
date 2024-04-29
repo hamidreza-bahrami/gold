@@ -4,7 +4,7 @@ import numpy as np
 import pickle 
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
-st.set_page_config(page_title='تشخیص بیش فعالی - RoboAi', layout='centered', page_icon='🤖')
+st.set_page_config(page_title='قیمت طلا - RoboAi', layout='centered', page_icon='🤖')
 
 def load_model():
     with open('saved.pkl', 'rb') as file:
