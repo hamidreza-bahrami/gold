@@ -4,6 +4,7 @@ import numpy as np
 import pickle 
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
+st.set_page_config(page_title='تشخیص بیش فعالی - RoboAi', layout='centered', page_icon='🤖')
 
 def load_model():
     with open('saved.pkl', 'rb') as file:
@@ -16,6 +17,7 @@ model = data['model']
 x = data['x']
 
 def show_page():
+    st.image('img.png')
     st.write("<h1 style='text-align: center; color: blue;'>مدل پیش بینی قیمت طلا</h1>", unsafe_allow_html=True)
     st.write("<h2 style='text-align: center; color: gray;'>ETF پیش بینی بر اساس شاخص های صندوق</h2>", unsafe_allow_html=True)
     st.write("<h3 style='text-align: center; color: gray;'>شاخص های زیر را وارد کنید</h3>", unsafe_allow_html=True)
